@@ -3,7 +3,7 @@ package Pathfinder;
 import java.security.InvalidParameterException;
 import java.util.ArrayList;
 
-public class Pather implements Restrictable {
+public class Pather {
     private static char[][] data;
     private static int x, y;
     private static ArrayList<Coordinates> current, next;
@@ -28,6 +28,7 @@ public class Pather implements Restrictable {
     }
 
     public boolean checkRestrictions() {
-
+        // Temporary fix
+        return false;
     }
 }
