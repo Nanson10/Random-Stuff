@@ -8,6 +8,6 @@ The Three_Times_Plus_One folder has multiple files that can be used to run speci
 
 All folders were run on the openJDK Java compiler. 
 
-**Please assume that if any element of this readme is incorrect, all other information may also be incorrect. If you find any problems in this repo please open an issue in this directory.**
+**Please assume that if any element of this readme is incorrect, all other information may also be incorrect. If you find any problems in this repo please notify me at "https://github.com/Nanson10".**
 
 **I am not liable for any damages incurred upon your device when running any files nor will I be able to help you run any of the already mentioned folders if there is any problem since I am new to sharing code online**
