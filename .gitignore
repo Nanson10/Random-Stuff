@@ -26,5 +26,5 @@ replay_pid*
 # actual files
 .DS_Store
 .gitignore
-.yml
+action.yml
 README.md
