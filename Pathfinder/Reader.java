@@ -7,23 +7,39 @@ import java.util.Scanner;
 
 public class Reader {
     private File file;
-    private char[][] data;
+    private char[][] map;
+    private Coordinates start;
 
+    /**
+     * Created by Nanson10.
+     * 
+     * @param file is the file to be read.
+     */
     public Reader(File file) {
         this.file = file;
-        data = new char[getHeight()][getLength()];
-        recordData();
+        map = new char[getHeight()][getLength()];
+        recordMap();
+        start = new Coordinates(getX(), getY());
     }
 
-    public char[][] getData() {
-        char[][] temp = new char[data.length][data[0].length];
-        for (int a = 0; a < data.length; a++)
-            for (int b = 0; b < data[0].length; b++)
-                temp[a][b] = data[a][b];
+    /**
+     * Created by Nanson10.
+     * 
+     * @return the map of the file.
+     */
+    public char[][] getMap() {
+        char[][] temp = new char[map.length][map[0].length];
+        for (int a = 0; a < map.length; a++)
+            for (int b = 0; b < map[0].length; b++)
+                temp[a][b] = map[a][b];
         return temp;
     }
 
-    private void recordData() {
+    /**
+     * Created by Nanson10.
+     * Records the map into a char[][].
+     */
+    private void recordMap() {
         try {
             Scanner sc = new Scanner(file);
             sc.nextLine();
@@ -33,7 +49,7 @@ public class Reader {
             while (sc.hasNext()) {
                 row = sc.nextLine();
                 for (int a = 0; a < row.length(); a++) {
-                    data[rowNum][a] = row.charAt(a);
+                    map[rowNum][a] = row.charAt(a);
                 }
                 rowNum++;
             }
@@ -45,6 +61,11 @@ public class Reader {
         }
     }
 
+    /**
+     * Created by Nanson10.
+     * 
+     * @return the height of the map.
+     */
     private int getHeight() {
         try {
             Scanner sc = new Scanner(file);
@@ -65,6 +86,11 @@ public class Reader {
         return -1;
     }
 
+    /**
+     * Created by Nanson10.
+     * 
+     * @return the length of the map.
+     */
     private int getLength() {
         try {
             Scanner sc = new Scanner(file);
@@ -86,7 +112,12 @@ public class Reader {
         return -1;
     }
 
-    public int getX() {
+    /**
+     * Created by Nanson10.
+     * 
+     * @return the x coordinate of the start.
+     */
+    private int getX() {
         try {
             Scanner sc = new Scanner(file);
 
@@ -101,7 +132,12 @@ public class Reader {
         return -1;
     }
 
-    public int getY() {
+    /**
+     * Created by Nanson10.
+     * 
+     * @return the y coordinate of the start.
+     */
+    private int getY() {
         try {
             Scanner sc = new Scanner(file);
 
@@ -115,5 +151,14 @@ public class Reader {
             System.exit(0);
         }
         return -1;
+    }
+
+    /**
+     * Created by Nanson10.
+     * 
+     * @return the coordinates of the start.
+     */
+    public Coordinates getCoordinates() {
+        return new Coordinates(start);
     }
 }
