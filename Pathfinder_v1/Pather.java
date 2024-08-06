@@ -1,5 +1,3 @@
-package Pathfinder;
-
 import java.security.InvalidParameterException;
 import java.util.ArrayList;
 
