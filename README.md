@@ -1,8 +1,8 @@
 **Download any part of this repo at your own risk:**
 
-This repo contains two folders: Pathfinder and Three_Times_Plus_One.
+This repo contains two folders: Pathfinder, Three_Times_Plus_One, and Math_Stuff.
 
-The Pathfinder folder has a centralized Driver file that runs its contents.
+The Pathfinder and Math_Stuff folder has a centralized Driver file that runs its contents.
 
 The Three_Times_Plus_One folder has multiple files that can be used to run specific actions in the program.
 
